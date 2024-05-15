@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Hungry bites
+        </title>
+        <style>
+            *{
+    margin:0%;
+    padding:0%;
+}
+.nav{
+    background-image: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png);
+   
+    width:100%;
+    height:400px;
+}
+.cont {
+    display:flex;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content:right,left;
+    padding-left: 70%;
+    color: white;
+    margin-top:0%;
+    margin-inline: 11px;
+}
+.cont a{
+    color:white;
+}
+.contain{
+    text-align: center;
+    color:white;
+    }
+.contain h1{
+    padding: 80px;
+    padding-bottom: 0%;
+    font-size: 100px;
+}
+.contain p{
+    padding:10px;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.inp{
+        text-align: center;
+}
+.inp input{
+    width: 500px;
+    height: 22px;
+    border:none;
+    outline:none;
+    font-size: medium;
+
+}
+.card{
+  display:flex;
+  justify-content: space-around;
+  padding-top: 70px;
+}
+.crd h3,p{
+    text-align: center;
+}
+.loca h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 60px;
+}
+.loca p{
+    padding-top: 20px;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.loc button{
+   
+    text-align: center;
+    width: 300px;
+    height: 28px;
+    margin:0 auto;
+    margin-left: 38%;
+    margin-bottom:20px;
+    border: 100px;
+
+}
+button{
+    align-items: center;
+    
+}
+.loc a{
+    color:black;
+}
+.loc button :hover{
+ color:grey;
+ 
+}
+.foot{
+    background-color: lightgrey;
+}
+.list{
+    display:grid;
+    justify-content:center;
+    justify-content: space-around;
+
+}
+.list h2{
+    padding-bottom: 10px;;
+}
+.list p{
+    padding-top: 5px;
+
+}
+
+.social{
+    display:grid;
+    justify-content:center;
+    justify-content:space-evenly;
+    text-align: center;
+    justify-items: auto;
+
+}
+.social a{
+    padding-top: 5px;
+    text-align: center;
+}
+.copy{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+        </style>
+    </head>
+    <body>
+        <header>
+    <div class="nav">
+        <div class="cont">
+            <a href="rest.html" target="_self"><span>Add restaurants</span></a>
+            <a href="login.html" target="_self"><p>Log in</p></a>
+             <P><a href="signup.html" target="_self">Sign up</a></P>
+         </div>
+        <div class="contain">
+               <h1>Hungry Bites</h1>
+                <p class="text">Find the best restaurants, 
+                    cafés and bars in India</p>
+            </div>
+            
+           <div class="inp">
+            <input type="text" placeholder="search for restaurants,cuisine or a dish"></input>
+           </div>
+    </div>
+    <div class="card">
+            <div class="crd">
+                <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?cs=srgb&dl=pexels-pixabay-262978.jpg&fm=jpg" alt="" width="250px" height="250px">
+                <h3>Order Online</h3>
+                <p>Stay home and order to your doorstep</p>
+            </div>
+            <div class="crd">
+                <img src="http://www.melissahartfiel.com/wp-content/uploads/2013/04/20130426-1304_untitled0051.jpg" alt="" width="250px" height="250px">
+                <h3>Order Online</h3>
+                <p>Stay home and order to your doorstep</p>
+            </div>
+            <div class="crd">
+                <img src="https://www.visittreasurelake.com/wp-content/uploads/2017/11/fine-dining-meal.jpg" alt="" width="250px" height="250px">
+                <h3>Order online</h3>
+                <p>Stay home and order to your doorstep</p>
+            </div>
+            </div>
+            <div class="loca">
+                <h1>Popular locations in <img src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp" alt="indianflag" width="30px" height="30px"> India</h1>
+                <p>Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.</p>
+            </div>
+            <div class="loc">
+                
+                          <button><a href="chennai.html" target="_self">chennai</a></button>
+                          <button><a href="Kerala.html" target="_self">Kerala</a></button>
+                          <button><a href="Bengalore.html" target="_self">Bengalore</a></button>
+                        <button><a href="AndhraPradesh.html" target="_self">AndhraPradesh</a></button>
+                    
+            </div>
+        </header>
+        <footer class="foot">
+            
+            <div class="list ">
+                <h2>About Hungry Bites</h2>
+                <p>Who are you</p>
+                <p>Blog</p>
+                <p>Work with us</p>
+                <p>Investor Relation</p>
+                <p>Contact us</p>
+            </div>
+            <div class="list ">
+                <h2>For restaurants</h2>
+                <p>Partner with us</p>
+                <p>Apps for you</p>
+            </div>
+            <div class="list ">
+                <h2>Learn more</h2>
+                <p>privacy</p>
+                <p>security</p>
+                <p>Terms</p>
+            </div>
+            <div class="social">
+                <h2>Social Links</h2>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <a href="#" class="fa fa-facebook">fa-facebook</a>
+                <a href="#" class="fa fa-youtube">fa-youtube</a>
+                <a href="#" class="fa fa-instagram">fa-instagram</a>
+                <a href="#" class="fa fa-twitter">fa-twitter</a>
+                <a href="#" class="fa fa-google">fa-google</a>
+            </div>
+            <div class="copy">
+                <h4>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. &copy;Hungry Bites All rights reserved.</h4>
+            </div>
+        </footer>
+    </body>
+</html>
