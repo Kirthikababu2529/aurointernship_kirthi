@@ -1,0 +1,223 @@
+//HTML code for to do list 
+
+ToDolist.html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List 📒</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+            <div class="container">
+              <h1>To Do List-Do it now💪🏆🎉</h1>
+               <form id="to-do">
+                 <input id="inp" type="text" placeholder="Enter your task" required>
+                 <button id="but" type="submit" >Add ➕</button>
+               </form>
+               <div class="section">
+                <h2>Incomplete Tasks</h2>
+                <ul id="incomplete-tasks" class="task-list"></ul>
+              </div>
+              <div class="section">
+                <h2>Completed Tasks</h2>
+                <ul id="completed-tasks" class="task-list"></ul>
+              </div>
+            </div>
+         <script src="script.js"></script>
+        
+    </body>
+</html>
+
+
+
+// Adding style using css  
+
+style.css
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://tse2.mm.bing.net/th?id=OIP.4huQVEDLZjNONvvIGGNI2gHaHa&pid=Api&P=0&h=180") ;
+    background-repeat: no-repeat ;
+    background-size: cover;
+   
+  }
+  
+  .container {
+    background-color: white;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  h1 {
+    margin: 0 0 20px;
+    text-align: center;
+    color:rgb(202, 16, 19);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    font-size: 33px;
+    font-family: poppins;
+  }
+  @keyframes example{
+    from{color:rgb(50, 32, 140);}
+    to{color:rgb(36, 118, 24);}
+  }
+  
+  form {
+    display: flex;
+    margin-bottom: 30px;
+
+  }
+  
+  form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size:15px;
+  }
+  
+  form button {
+    padding: 15px;
+    border: none;
+    background-color: #139925;
+    color: rgb(249, 249, 249);
+    font-size: 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #89187f;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .task-list li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .task-list li.completed span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .task-list li button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-list li button:hover {
+    background-color: #c82333;
+  }
+
+
+//Javascript code
+
+script.js
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form=document.getElementById("to-do");
+    const inp=document.getElementById("inp");
+    const incompleteTasks=document.getElementById("incomplete-tasks");
+    const completedTasks=document.getElementById("completed-tasks");
+
+    form.addEventListener("submit",(e) => {
+     e.preventDefault();
+     addTask(inp.value);
+     inp.value="";
+    });
+  
+ 
+    function addTask(task)
+    {
+       const li=document.createElement("li");
+       const checkbox=document.createElement("input");
+       checkbox.type="checkbox";
+       checkbox.addEventListener("change",() =>{
+        if(checkbox.checked){
+           moveTaskToCompleted(li);
+        }
+        else{
+           moveTaskToIncomplete(li);
+        }
+       });
+      
+      const span=document.createElement("span");
+      span.textContent=task;
+
+
+       const deleteBtn=document.createElement("button");
+       deleteBtn.textContent="Delete";
+       deleteBtn.addEventListener("click",() => {
+       li.remove();
+       });
+    
+      li.appendChild(checkbox);
+      li.appendChild(span);
+      li.appendChild(deleteBtn);
+      incompleteTasks.appendChild(li);
+    }
+
+    
+  function moveTaskToCompleted(taskElement) {
+    taskElement.querySelector('input[type="checkbox"]').checked = true;
+    taskElement.classList.add('completed');
+    completedTasks.appendChild(taskElement);
+  }
+
+  function moveTaskToIncomplete(taskElement) {
+    taskElement.querySelector('input[type="checkbox"]').checked = false;
+    taskElement.classList.remove('completed');
+    incompleteTasks.appendChild(taskElement);
+  }
+});
+  
+  
